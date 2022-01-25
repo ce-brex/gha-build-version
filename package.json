@@ -1,0 +1,30 @@
+{
+    "name": "build-version",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Generate a date based build version",
+    "main": "index.js",
+    "scripts": {
+        "make": "ncc build src/index.js --license licenses.txt -o dist"
+    },
+    "author": "Clinton Electronics",
+    "contributors": [
+        {
+            "name": "Bill Rex",
+            "email": "brex@clintonelectronics.com"
+        }
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/clintonelec/gha-build-version.git"
+    },
+    "dependencies": {
+        "@actions/core": "^1.6.0",
+        "build-number-generator": "^1.0.0",
+        "semver": "^7.3.5"
+    },
+    "devDependencies": {
+        "@vercel/ncc": "^0.33.1"
+    }
+}
