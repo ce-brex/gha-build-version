@@ -7,9 +7,10 @@ const { generate } = require("build-number-generator");
 
 try {
     const path = core.getInput("path");
+    const separator = core.getInput("separator");
+
     const packageJson = fs.readFileSync(join(path, "package.json")).toString();
     const packageVersion = JSON.parse(packageJson).version;
-    const separator = core.getInput("separator");
 
     const version = semverValid(semverCoerce(packageVersion));
 
